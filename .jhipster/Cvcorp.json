@@ -1,0 +1,90 @@
+{
+  "name": "Cvcorp",
+  "fields": [
+    {
+      "fieldName": "profil",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pays",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ville",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateNaissence",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "naissanceLieu",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "etatCivil",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "linkedId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "adresse",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sexe",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codePostal",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "competence",
+      "otherEntityRelationshipName": "cvcorp",
+      "relationshipName": "competence"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "experience",
+      "otherEntityRelationshipName": "cvcorp",
+      "relationshipName": "experience"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "formation",
+      "otherEntityRelationshipName": "cvcorp",
+      "relationshipName": "formation"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "langue",
+      "otherEntityRelationshipName": "cvcorp",
+      "relationshipName": "langue"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "stage",
+      "otherEntityRelationshipName": "cvcorp",
+      "relationshipName": "stage"
+    }
+  ],
+  "changelogDate": "20210303150400",
+  "javadoc": "LES ENTITES",
+  "entityTableName": "cvcorp",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "cvcorp",
+  "applications": "*",
+  "microserviceName": "cvcorp"
+}

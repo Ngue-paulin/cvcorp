@@ -14,7 +14,18 @@
     <property name="uuidType" value="varchar(36)" dbms="h2, mysql, mariadb"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210303150400_added_entity_Cvcorp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210303150500_added_entity_Competence.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210303150600_added_entity_Langue.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210303150700_added_entity_Formation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210303150800_added_entity_Experience.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210303150900_added_entity_Stage.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20210303150500_added_entity_constraints_Competence.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210303150600_added_entity_constraints_Langue.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210303150700_added_entity_constraints_Formation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210303150800_added_entity_constraints_Experience.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210303150900_added_entity_constraints_Stage.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

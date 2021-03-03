@@ -1,0 +1,81 @@
+/**
+* LES ENTITES
+*/
+entity Cvcorp {
+	profil String,
+    pays String,
+    ville String,
+    dateNaissence Instant,
+    naissanceLieu String,
+    etatCivil String,
+    linkedId String ,
+    adresse String,
+    sexe String,
+    codePostal String
+}
+
+entity Competence {
+	description String,
+    libele String required,
+    niveau Niveau
+}
+
+entity Langue {
+	description String,
+    libele String required,
+    niveau Niveau
+    
+}
+
+entity Formation {
+	periodBigin Instant,
+    periodEnd Instant,
+    periodNow Boolean,
+    diplome String,
+    ville String,
+    description String
+}
+
+entity Experience {
+	periodBigin Instant,
+    periodEnd Instant,
+    periodNow Boolean,
+    ville String,
+    poste String,
+    employeur String,
+    description String
+}
+
+entity Stage {
+	periodBigin Instant,
+    periodEnd Instant,
+    periodNow Boolean,
+    ville String,
+    poste String,
+    employeur String,
+    description String
+}
+
+enum Niveau{
+    DEBUTANT, INTERMEDIAIR, BIEN, TRES_BIEN, EXELLENT
+}
+
+relationship OneToMany {
+    Cvcorp to Competence{cvcorp} ,
+    Cvcorp to Experience{cvcorp},
+	Cvcorp to Formation{cvcorp},
+	Cvcorp to Langue{cvcorp},
+    Cvcorp to Stage{cvcorp}
+}
+
+paginate all with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+
+// set filter
+filter *
+

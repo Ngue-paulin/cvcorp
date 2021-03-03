@@ -1,0 +1,40 @@
+{
+  "name": "Langue",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "libele",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "niveau",
+      "fieldType": "Niveau",
+      "fieldValues": "DEBUTANT,INTERMEDIAIR,BIEN,TRES_BIEN,EXELLENT"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "cvcorp",
+      "otherEntityRelationshipName": "langue",
+      "relationshipName": "cvcorp",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210303150600",
+  "entityTableName": "langue",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "cvcorp",
+  "applications": "*",
+  "microserviceName": "cvcorp"
+}

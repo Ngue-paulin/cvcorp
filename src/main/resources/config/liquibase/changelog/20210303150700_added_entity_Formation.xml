@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+        <property name="autoIncrement" value="true"/>
+
+    <!--
+        Added the entity Formation.
+    -->
+    <changeSet id="20210303150700-1" author="jhipster">
+        <createTable tableName="formation">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="period_bigin" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="period_end" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="period_now" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="diplome" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ville" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="description" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cvcorp_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="formation" columnName="period_bigin" columnDataType="datetime"/>
+        <dropDefaultValue tableName="formation" columnName="period_end" columnDataType="datetime"/>
+    </changeSet>
+
+    <changeSet id="20210303150700-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20210303150700-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/formation.csv"
+                  separator=";"
+                  tableName="formation">
+            <column name="id" type="numeric"/>
+            <column name="period_bigin" type="datetime"/>
+            <column name="period_end" type="datetime"/>
+            <column name="period_now" type="boolean"/>
+            <column name="diplome" type="string"/>
+            <column name="ville" type="string"/>
+            <column name="description" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>
