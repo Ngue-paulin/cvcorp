@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.cv.cvcorp"
+    },
+    "jhipsterVersion": "6.10.5",
+    "applicationType": "microservice",
+    "baseName": "cvcorp",
+    "packageName": "com.cv.cvcorp",
+    "packageFolder": "com/cv/cvcorp",
+    "serverPort": "8081",
+    "authenticationType": "uaa",
+    "uaaBaseName": "cvuaa",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NTJjYmY3Y2QwOTZkMDI4NGYwNTM5MjExMDNkNmYzMzIzODNkOTllMTIwZjIyYzk4NWM3Y2VjYzdjODEyNWUzNmYyM2FhMTEwYTJhZDUxM2JlODBjNmQ4NzUxYWZhMWVjNmMyMDIzOWM0MzljY2YyOGI1MjNmNzUyZWJjZWZlODc=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1614771063662,
+    "testFrameworks": ["gatling"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
