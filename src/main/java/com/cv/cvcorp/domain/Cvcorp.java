@@ -59,6 +59,9 @@ public class Cvcorp implements Serializable {
     @OneToMany(mappedBy = "cvcorp")
     private Set<Experience> experiences = new HashSet<>();
 
+    /**
+     * formations du client
+     */
     @OneToMany(mappedBy = "cvcorp")
     private Set<Formation> formations = new HashSet<>();
 
