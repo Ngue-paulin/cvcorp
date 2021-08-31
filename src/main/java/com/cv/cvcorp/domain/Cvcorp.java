@@ -47,6 +47,9 @@ public class Cvcorp implements Serializable {
     @Column(name = "adresse")
     private String adresse;
 
+    /**
+     * le sex du client 
+     */
     @Column(name = "sexe")
     private String sexe;
 
